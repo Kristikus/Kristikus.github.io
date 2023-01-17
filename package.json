@@ -1,0 +1,21 @@
+{
+    "name": "kristikus.github.io",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./sass/main.scss:./assets/styles.css --style expanded",
+        "prefix": "postcss ./assets/styles.css --use autoprefixer -d ./assets/prefixed/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Kristikus/Kristikus.github.io.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Kristikus/Kristikus.github.io/issues"
+    },
+    "homepage": "https://github.com/Kristikus/Kristikus.github.io#readme",
+    "browserslist": "last 4 versions"
+}

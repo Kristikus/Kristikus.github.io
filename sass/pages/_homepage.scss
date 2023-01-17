@@ -1,0 +1,32 @@
+.location {
+    background-color: #EAEAEA;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: none;
+    height: 50px;
+    p {
+        margin-left: 10px;
+    }
+}
+
+.section-cta {
+    text-align: center;
+    padding: 22px;
+    background-color:#F7f7f7;
+    margin-bottom: 38px;
+    h1 {
+        font-size: 24px;
+        padding-top: 20px;
+    }
+    p {
+        margin-bottom: 30px;
+        color: #353535;
+    }
+}
+
+.section-functioning {
+    padding: 0 20px 0 30px;
+}
+

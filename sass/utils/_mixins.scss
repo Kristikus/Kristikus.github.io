@@ -1,0 +1,36 @@
+$btn-palette: (
+    btn: (
+        bkg: #F7F7F7,
+        txt: $color-black,
+        radius: 20px,
+        shadow: $shadow-size rgba(0,0,0,0.15),
+        padding: 17px 18px,
+    ),
+    btn-cta: (
+        bkg: linear-gradient(355.1deg, $color-primary -5%, #FF79DA 110%),
+        txt: $color-white,
+        radius: 25px,
+        shadow: $shadow-size rgba(0,0,0,0.25),
+        padding: 12px 24px,
+    ),
+    btn-menu: (
+        bkg: $color-white,
+        txt: $color-black,
+        radius: 15px,
+        shadow: $shadow-size rgba(0,0,0,0.1),
+    ),
+    btn-number: (
+        bkg: $color-primary,
+        txt: $color-white,
+        radius: 50%,
+    )
+);
+
+@mixin btn-palette($type-btn) {
+    $palette: map-get($btn-palette, $type-btn);
+    background: map-get($palette, bkg);
+    color: map-get($palette, txt);
+    border-radius: map-get($palette, radius);
+    box-shadow: map-get($palette, shadow);
+    padding: map-get($palette, padding);
+}

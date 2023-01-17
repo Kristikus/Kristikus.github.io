@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 63px;
+    position: relative;
+    &_icon {
+        font-size: 17px;
+        position: absolute;
+        top: 22px;
+        left: 15px;
+    }
+    &_link-logo {
+        width: 100%;
+        text-align: center;
+    }
+    &_logo {
+        height: 30px;
+        margin: 0 35px;
+    }
+}
+
+h2,
+h3 {
+    margin: $margin-global;
+}
