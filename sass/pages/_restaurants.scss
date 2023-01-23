@@ -2,9 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: #f7f7f7;
-    margin-top: 25px;
     padding: 35px 0;
- 
     &_card {
         background-color: $color-white;
         border-radius: $radius-card;
@@ -20,9 +18,9 @@
     &_image {
         position: relative;
         p {
-            background-color: $color-secondary;
+            background-color: $color-tertiary;
             padding: 2px 12px;
-            color: darken($color-secondary, 40%);
+            color: darken($color-tertiary, 40%);
             position: absolute;
             right: 10px;
             top: 10px;
@@ -32,13 +30,13 @@
     &_description {
         display: flex;
         justify-content: space-between;
-        padding: 10px 0;
+        padding: 10px 20px 10px 0;
         p {
             margin: $margin-global;
         }
-    & i {
-        margin: 15px 20px 0 0;
-        font-size: 22px;
-        }
+    }
+    &_icon {
+        display: flex;
+        align-items: center;
     }
 }

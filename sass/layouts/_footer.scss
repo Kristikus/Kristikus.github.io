@@ -1,6 +1,7 @@
 .footer {
     background-color: #353535;
     padding: 20px;
+
     &_logo {
         font-family: 'Shrikhand', cursive;
         font-style: normal;
@@ -10,14 +11,17 @@
         margin-left: 0;
         margin-bottom: 15px;
     }
+
     &_nav i {
-        width: 25px;
+        width: 30px;
     }
+
     &_nav a {
         color: $color-white;
         line-height: 28px;
         display: block;
     }
+
     &_nav--font {
         font-weight: 500;
     }

@@ -1,15 +1,22 @@
 .btn {
     @include btn-palette(btn);
     position: relative;
-    margin: 20px 0px 20px 0px;
     font-size: 15px;
     width: 100%;
-    &:active {
-        background-color: lighten($color-primary, 35%)
+    &:hover {
+        background-color: lighten($color-primary, 35%);
+    }
+    &:hover > &-icon {
+        transform: scale(1);
+        color: $color-primary;
+    }
+    &-functioning {
+        margin: 20px 0 20px 0;
     }
     &-cta {
         @include btn-palette(btn-cta);
         width: auto;
+        margin: 30px 0 30px 0;
     }
     &-icon {
         margin: 0 10px;
@@ -17,22 +24,36 @@
     &-number {
         @include btn-palette(btn-number);
         font-size: 14px;
-        padding: 2px 6px;
         position: absolute;
         left: -10px;
         top: 14px;
-    }
+        }
+
     &-menu {
         @include btn-palette(btn-menu);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 0;
-        margin: 15px 10px;
+        margin: 15px 10px 0 10px;
         p,
         h3 {
             margin:$margin-global;
             font-size: 18px;
-        }  
+        }
+        &_description {
+            width: 80%;
+        } 
+        & p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 15px;
+        }
+        &_price {
+            margin-right: 20px;
+            margin-top: 25px;
+        }
+      
     }
 }
+
