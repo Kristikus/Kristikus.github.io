@@ -31,13 +31,10 @@ h2 {
 }
 .fa-heart_div {
     position: relative;
-    margin-right: 15px;
     &:hover {
     & > .fa-regular + .fa-solid {
-        transform: scale(1.1);  
-        // opacity: 1;
-        transition: all 350ms;
-
+        transform: scale(1.05);  
+        transition: transform 500ms ease-out;
     }
 }
     .fa-regular {
@@ -45,9 +42,8 @@ h2 {
         color: #555;
     }
     .fa-solid {
-        // opacity: 0;
         transform: scale(0);
-        position: absolute;
+        // position: absolute;
         color: $color-secondary;
         background-color: transparent;
         background-image: linear-gradient(355.1deg, $color-primary -5%, #FF79DA 110%);
