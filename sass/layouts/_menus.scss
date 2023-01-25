@@ -19,9 +19,11 @@
     &_menu {
         border-radius: 35px 35px 0 0;
         background-color: #f7f7f7;
-        margin-top: -60px;
         position: relative;
+        margin-top: -60px;
         padding-top: 30px;
+        max-width: 1400px;
+       
         & h1 {
             font-family: "shrikhand", cursive;
             font-weight: 400;
@@ -35,6 +37,7 @@
             border-bottom: 2px solid $color-tertiary;
             width: 42px;
         }
+
     }
 
 }

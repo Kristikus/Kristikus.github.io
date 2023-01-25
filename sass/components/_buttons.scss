@@ -17,7 +17,28 @@
         @include btn-palette(btn-cta);
         width: auto;
         margin: 30px 0 30px 0;
+        position: relative;
+        z-index: 1;
+        &:hover {
+            &::after {
+                opacity: 1;
+        }
     }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(lighten($color-secondary, 5), lighten($color-primary, 5));
+            border-radius: 20px;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }
+    }
+
     &-icon {
         margin: 0 10px;
     }
@@ -35,8 +56,7 @@
         align-items: center;
         justify-content: space-between;
         margin: 15px 10px 0 10px;
-        p,
-        h3 {
+        & h3 {
             margin:$margin-global;
             font-size: 18px;
         }
@@ -44,6 +64,7 @@
             width: 80%;
         } 
         & p {
+            margin: $margin-global;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -53,7 +74,7 @@
             margin-right: 20px;
             margin-top: 25px;
         }
-      
     }
 }
+
 
