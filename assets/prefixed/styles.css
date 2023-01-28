@@ -27,6 +27,11 @@ h2 {
   font-size: 22px;
 }
 
+h2,
+h3 {
+  margin: 5px 15px;
+}
+
 .fa-heart {
   font-size: 24px;
 }
@@ -34,9 +39,9 @@ h2 {
 .fa-heart_div {
   position: relative;
 }
-.fa-heart_div:hover > .fa-regular + .fa-solid {
+.fa-heart_div:hover > .fa-solid {
   transform: scale(1.1);
-  transition: transform 500ms ease-out;
+  transition: transform 500ms ease-in-out;
 }
 .fa-heart_div .fa-regular {
   position: absolute;
@@ -46,17 +51,62 @@ h2 {
   transform: scale(0);
   color: #FF79DA;
   background-color: transparent;
-  background-image: linear-gradient(355.1deg, #9356dc -5%, #FF79DA 110%);
+  background-image: linear-gradient(355.1deg, #9356dc -15%, #FF79DA 110%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+body {
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  z-index: 6;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: white;
+  animation: loader 2.5s both;
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border: 10px solid #FF79DA;
+  border-radius: 50%;
+  background-color: transparent;
+  z-index: 7;
+  visibility: visible;
+  animation: loader 2.5s both;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0.8;
+  }
+  99%, 100% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .btn {
   background: #F7F7F7;
   color: #000;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  padding: 17px 18px;
+  padding: 17px 16px;
   position: relative;
   font-size: 15px;
   width: 100%;
@@ -71,7 +121,7 @@ h2 {
   margin: 20px 0 20px 0;
 }
 .btn-cta {
-  background: linear-gradient(355.1deg, #9356dc -5%, #FF79DA 110%);
+  background: linear-gradient(355.1deg, #9356dc -15%, #FF79DA 110%);
   color: #fff;
   border-radius: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
@@ -123,6 +173,9 @@ h2 {
 .btn-menu h3 {
   margin: 5px 15px;
   font-size: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .btn-menu_description {
   width: 80%;
@@ -148,7 +201,7 @@ h2 {
 .btn-menu_check {
   overflow: hidden;
   width: 0px;
-  height: 75px;
+  height: 70px;
   background-color: #99E2D0;
   border-radius: 0 10px 10px 0;
   display: flex;
@@ -159,7 +212,8 @@ h2 {
 .btn-menu_menu {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 98%;
+  overflow: hidden;
 }
 
 .fa-check {
@@ -172,6 +226,28 @@ h2 {
   transition: all 1000ms;
 }
 
+@keyframes slide-menu {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+.entrees {
+  animation: slide-menu 1s ease-out 3s both;
+}
+
+.plats {
+  animation: slide-menu 1s ease-out 3.5s both;
+}
+
+.desserts {
+  animation: slide-menu 1s ease-out 4s both;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -181,8 +257,15 @@ h2 {
 .header_icon {
   font-size: 17px;
   position: absolute;
-  top: 22px;
+  top: 18px;
   left: 15px;
+  line-height: 20px;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+.header_icon:hover {
+  color: #9356dc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .header_link-logo {
   width: 100%;
@@ -191,11 +274,6 @@ h2 {
 .header_logo {
   height: 30px;
   margin: 0 35px;
-}
-
-h2,
-h3 {
-  margin: 5px 15px;
 }
 
 .section-cta {
@@ -249,7 +327,26 @@ h3 {
   border-bottom: 2px solid #99E2D0;
   width: 42px;
 }
+.section-menu_starters {
+  animation: slide-menu 1s ease-out 2.2s both;
+}
+.section-menu_courses {
+  animation: slide-menu 1s ease-out 2.7s both;
+}
+.section-menu_desserts {
+  animation: slide-menu 1s ease-out 3.2s both;
+}
 
+@keyframes slide-menu {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
 .footer {
   background-color: #353535;
   padding: 20px;
@@ -332,6 +429,9 @@ h3 {
 }
 .section-restaurants_description p {
   margin: 5px 15px;
+}
+.section-restaurants_description .fa-heart_div {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

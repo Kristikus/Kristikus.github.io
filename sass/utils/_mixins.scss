@@ -4,10 +4,10 @@ $btn-palette: (
         txt: $color-black,
         radius: 20px,
         shadow: $shadow-size rgba(0,0,0,0.15),
-        padding: 17px 18px,
+        padding: 17px 16px,
     ),
     btn-cta: (
-        bkg: linear-gradient(355.1deg, $color-primary -5%, #FF79DA 110%),
+        bkg: linear-gradient(355.1deg, $color-primary -15%, #FF79DA 110%),
         txt: $color-white,
         radius: 25px,
         shadow: $shadow-size rgba(0,0,0,0.25),

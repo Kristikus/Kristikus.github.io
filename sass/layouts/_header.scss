@@ -6,8 +6,15 @@
     &_icon {
         font-size: 17px;
         position: absolute;
-        top: 22px;
+        top: 18px;
         left: 15px;
+        line-height: 20px;
+        padding: 3px 6px;
+        border-radius: 50%;
+        &:hover {
+           color: $color-primary;
+           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
     }
     &_link-logo {
         width: 100%;
@@ -17,9 +24,4 @@
         height: 30px;
         margin: 0 35px;
     }
-}
-
-h2,
-h3 {
-    margin: $margin-global;
 }

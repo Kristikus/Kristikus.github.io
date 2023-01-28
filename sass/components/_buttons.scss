@@ -58,6 +58,9 @@
         & h3 {
             margin:$margin-global;
             font-size: 18px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         &_description {
             width: 80%;
@@ -85,7 +88,7 @@
         &_check  {
             overflow: hidden;
             width: 0px;
-            height: 75px;
+            height: 70px;
             background-color: $color-tertiary;
             border-radius: 0 10px 10px 0;
             display: flex;
@@ -96,7 +99,8 @@
         &_menu {
                 display: flex;
                 justify-content: space-between;
-                width: 100%;
+                width: 98%;
+                overflow: hidden;
         }
     }
 }
@@ -111,5 +115,26 @@
     transition: all 1000ms;
 }
   
+@keyframes slide-menu {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+.entrees {
+    animation: slide-menu 1s ease-out 3s both;
+}
+
+.plats {
+    animation: slide-menu 1s ease-out 3.5s both;
+}
+
+.desserts {
+    animation: slide-menu 1s ease-out 4s both;
+}
 
 
