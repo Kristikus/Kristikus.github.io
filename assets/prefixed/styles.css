@@ -310,9 +310,9 @@ body::after {
   border-radius: 35px 35px 0 0;
   background-color: #f7f7f7;
   position: relative;
-  margin-top: -60px;
   padding-top: 30px;
-  max-width: 1400px;
+  max-width: 1000px;
+  margin: -60px auto 0;
 }
 .section-menu_menu h1 {
   font-family: "shrikhand", cursive;
