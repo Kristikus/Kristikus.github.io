@@ -1,57 +1,151 @@
-body {
-    position: relative;
-    // z-index: 8;
-    // &:active {
-    // &::before {
-    //         opacity: 0.8;
-    //         transform: scale(0);
-    // }
-    // }
-    &::before {
-        content: "";
-        position: absolute;
-        z-index: 6;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-color: white;
-        // opacity: 0;
-        // transform: scale(1);
-        // transition: opacity 2s;
-        animation: loader 2.5s both;
-    }
-    &::after {
-        content: "";
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        width: 50px;
-        height: 50px;
-        border: 10px solid $color-secondary;
-        border-radius: 50%;
+.loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 9;
+    animation: background-loader 3s ease-in-out both;
+    &-div {
+        & div:nth-child(1) {
         background-color: transparent;
-        z-index: 7;
-        visibility: visible;
-        animation: loader 2.5s both;
+        border: 7px solid;
+        border-color: $color-primary transparent;
+        border-radius: 50%;
+        position: fixed;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        margin-left: -40px;
+        margin-top: -40px;
+        animation: demi-circle 1s ease-in-out infinite both ;
+    }
+        & div:nth-child(2) {
+        background-color: transparent;
+        border: 5px solid;
+        border-color: $color-tertiary;
+        border-radius: 50%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        width: 80px;
+        height: 80px;
+        animation: loader 1s ease-in-out alternate infinite both ;
+        }
     }
 }
 
-@keyframes loader {
+@keyframes background-loader {
     0% {
-        opacity: 0.8;
-        
+        opacity: 0.9;
+    
     }
-    99%, 100% {
-        opacity: 0.8;
-        
+    95%, 100% {
+        opacity: 0.9; 
     }
     100% {
         opacity: 0;
         visibility: hidden;
     }
 }
+
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+        transform: scale(0.3);
+    }
+    35% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.5;
+        visibility: hidden;
+        transform: scale(1.6);
+    }
+}
+
+@keyframes demi-circle {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0.6;
+    }
+    35% {
+        opacity: 1;
+    }
+    85%,100% {
+        transform: rotate(300deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0.4;
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $cd-bars: #15DEA5;
+// $size: 3vh;
+// $anim-dur: 1000ms;
+// $num-bars: 5;
+// $anim-delay: 250ms;
+
+// .container {
+//     display: flex;
+//     justify-content: center;
+// }
+
+// .load {
+//     width: $size*10;
+//     height: $size*7.5;
+//     display: flex;
+//     justify-content: space-evenly;
+//     &__bar {
+//         background-color: #15DEA5;
+//         height: 100%;
+//         width: $size;
+//         animation: bars $anim-dur backwards infinite alternate ease-in-out;
+//         @for $test from 1 through $num-bars {
+//             &--#{$test} {
+//                 animation-delay: $anim-delay * $test;
+//             }
+//         }
+//     }
+// }
+
+
+// @keyframes bars {
+//     0% {
+//         transform: scaleY(0.5);
+//         opacity: 0.3;
+//     }
+//     100% {
+//         transform: scaleY(1.0);
+//         opacity: 0.8
+//     }
+// }

@@ -56,48 +56,85 @@ h3 {
   -webkit-text-fill-color: transparent;
 }
 
-body {
-  position: relative;
-}
-body::before {
-  content: "";
-  position: absolute;
-  z-index: 6;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: white;
-  animation: loader 2.5s both;
-}
-body::after {
-  content: "";
+.loader {
+  width: 100%;
+  height: 100%;
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  border: 10px solid #FF79DA;
-  border-radius: 50%;
+  background-color: white;
+  z-index: 9;
+  animation: background-loader 3s ease-in-out both;
+}
+.loader-div div:nth-child(1) {
   background-color: transparent;
-  z-index: 7;
-  visibility: visible;
-  animation: loader 2.5s both;
+  border: 7px solid;
+  border-color: #9356dc transparent;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+  animation: demi-circle 1s ease-in-out infinite both;
+}
+.loader-div div:nth-child(2) {
+  background-color: transparent;
+  border: 5px solid;
+  border-color: #99E2D0;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  width: 80px;
+  height: 80px;
+  animation: loader 1s ease-in-out alternate infinite both;
 }
 
-@keyframes loader {
+@keyframes background-loader {
   0% {
-    opacity: 0.8;
+    opacity: 0.9;
   }
-  99%, 100% {
-    opacity: 0.8;
+  95%, 100% {
+    opacity: 0.9;
   }
   100% {
     opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+    transform: scale(0.3);
+  }
+  35% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.5;
+    visibility: hidden;
+    transform: scale(1.6);
+  }
+}
+@keyframes demi-circle {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.6;
+  }
+  35% {
+    opacity: 1;
+  }
+  85%, 100% {
+    transform: rotate(300deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.4;
     visibility: hidden;
   }
 }
@@ -226,28 +263,6 @@ body::after {
   transition: all 1000ms;
 }
 
-@keyframes slide-menu {
-  from {
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0);
-    opacity: 1;
-  }
-}
-.entrees {
-  animation: slide-menu 1s ease-out 3s both;
-}
-
-.plats {
-  animation: slide-menu 1s ease-out 3.5s both;
-}
-
-.desserts {
-  animation: slide-menu 1s ease-out 4s both;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -289,36 +304,38 @@ body::after {
   color: #353535;
 }
 
-.section-menu_image--banner {
+.menu_image--banner {
   width: 100%;
   height: 250px;
 }
-.section-menu_image--banner img {
+.menu_image--banner img {
   border-radius: 0;
   object-fit: cover;
   width: 100%;
-  height: 220px;
+  height: 250px;
 }
-.section-menu_heading {
+.menu_heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 40px;
   margin: 0 30px 0 20px;
 }
-.section-menu_menu {
+.menu_menu {
   border-radius: 35px 35px 0 0;
   background-color: #f7f7f7;
   position: relative;
   padding-top: 30px;
   max-width: 1000px;
   margin: -60px auto 0;
+  display: flex;
+  justify-content: center;
 }
-.section-menu_menu h1 {
+.menu_menu h1 {
   font-family: "shrikhand", cursive;
   font-weight: 400;
 }
-.section-menu_menu h2 {
+.menu_menu h2 {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 18px;
@@ -327,16 +344,19 @@ body::after {
   border-bottom: 2px solid #99E2D0;
   width: 42px;
 }
-.section-menu_starters {
-  animation: slide-menu 1s ease-out 2.2s both;
+.menu_div {
+  width: 100%;
+  max-width: 700px;
 }
-.section-menu_courses {
-  animation: slide-menu 1s ease-out 2.7s both;
+.menu_starters {
+  animation: slide-menu 1s ease-out 0.3s both;
 }
-.section-menu_desserts {
-  animation: slide-menu 1s ease-out 3.2s both;
+.menu_courses {
+  animation: slide-menu 1s ease-out 0.8s both;
 }
-
+.menu_desserts {
+  animation: slide-menu 1s ease-out 1.3s both;
+}
 @keyframes slide-menu {
   from {
     transform: translateY(-10px);
@@ -347,6 +367,7 @@ body::after {
     opacity: 1;
   }
 }
+
 .footer {
   background-color: #353535;
   padding: 20px;
