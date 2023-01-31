@@ -2,6 +2,7 @@
     &_image--banner {
         width: 100%;
         height: 250px;
+
         & img {
             border-radius: 0;
             object-fit: cover;
@@ -20,17 +21,19 @@
 
     &_menu {
         border-radius: 35px 35px 0 0;
-        background-color: #f7f7f7;
+        background-color:$clr-bkg-clear;
         position: relative;
         padding-top: 30px;
         max-width: 1000px;
         margin: -60px auto 0;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
+
         & h1 {
             font-family: "shrikhand", cursive;
             font-weight: 400;
         }
+
         & h2 {
             text-transform: uppercase;
             font-weight: 300;
@@ -41,9 +44,10 @@
             width: 42px;
         }
     }
+
     &_div {
         width: 100%;
-        max-width: 700px;       
+        max-width: 700px;
     }
 
     &_starters {
@@ -58,16 +62,15 @@
         animation: slide-menu 1s ease-out 1.3s both;
     }
 
+    @keyframes slide-menu {
+        from {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
 
-@keyframes slide-menu {
-    from {
-        transform: translateY(-10px);
-        opacity: 0;
+        to {
+            transform: translate(0);
+            opacity: 1;
+        }
     }
-
-    to {
-        transform: translate(0);
-        opacity: 1;
-    }
-}
 }

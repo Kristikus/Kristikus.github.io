@@ -6,15 +6,28 @@
     justify-content: center;
     max-width: none;
     height: 50px;
+
     p {
         margin-left: 10px;
     }
 }
 
 .section-functioning {
-    margin: 35px 0;
-    &_div {
-    padding: 0 20px 0 30px;
-}
-}
+    margin: 35px 15px;
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 35px 30px 35px 100px;
+    }
 
+    &_div {
+        padding: 0 20px 0 30px;
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1000px;
+        }
+    }
+}

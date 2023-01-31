@@ -3,6 +3,7 @@
     align-items: center;
     height: 63px;
     position: relative;
+
     &_icon {
         font-size: 17px;
         position: absolute;
@@ -11,15 +12,18 @@
         line-height: 20px;
         padding: 3px 6px;
         border-radius: 50%;
+
         &:hover {
-           color: $color-primary;
-           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            color: $color-primary;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
     }
+
     &_link-logo {
         width: 100%;
         text-align: center;
     }
+
     &_logo {
         height: 30px;
         margin: 0 35px;

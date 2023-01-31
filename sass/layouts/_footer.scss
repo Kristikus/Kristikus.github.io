@@ -1,7 +1,14 @@
 .footer {
     background-color: #353535;
-    padding: 20px;
-
+    padding: 30px;
+   
+    @include desktop{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: baseline;
+        padding-right: 50px;
+    }
     &_logo {
         font-family: 'Shrikhand', cursive;
         font-style: normal;
@@ -10,16 +17,29 @@
         font-size: 18px;
         margin-left: 0;
         margin-bottom: 15px;
+        @include desktop {
+            margin: 0;
+        }
     }
 
+    &_nav {
+        @include desktop {
+            display: flex;
+        }
+    }
     &_nav i {
-        width: 30px;
+        width: 28px;
     }
 
     &_nav a {
         color: $color-white;
-        line-height: 28px;
+        line-height: 25px;
         display: block;
+        @include desktop {
+            display: flex;
+            margin-right: 24px;
+            align-items: center;
+        }
     }
 
     &_nav--font {

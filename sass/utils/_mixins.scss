@@ -1,27 +1,23 @@
 $btn-palette: (
-    btn: (
-        bkg: #F7F7F7,
+    btn: (bkg: $clr-bkg-clear,
         txt: $color-black,
         radius: 20px,
-        shadow: $shadow-size rgba(0,0,0,0.15),
+        shadow: $shadow-size rgba(0, 0, 0, 0.15),
         padding: 17px 16px,
     ),
-    btn-cta: (
-        bkg: linear-gradient(355.1deg, $color-primary -15%, #FF79DA 110%),
+    btn-cta: (bkg: linear-gradient(355.1deg, $color-primary -15%, $color-secondary 110%),
         txt: $color-white,
         radius: 25px,
-        shadow: $shadow-size rgba(0,0,0,0.25),
+        shadow: $shadow-size rgba(0, 0, 0, 0.25),
         padding: 12px 24px,
     ),
-    btn-menu: (
-        bkg: $color-white,
+    btn-menu: (bkg: $color-white,
         txt: $color-black,
-        radius: 15px,
-        shadow: $shadow-size rgba(0,0,0,0.1),
+        radius: $radius-card,
+        shadow: $shadow-size rgba(0, 0, 0, 0.1),
         // padding: 10px 0,
     ),
-    btn-number: (
-        bkg: $color-primary,
+    btn-number: (bkg: $color-primary,
         txt: $color-white,
         radius: 50%,
         padding: 2px 6px,
@@ -35,4 +31,23 @@ $btn-palette: (
     border-radius: map-get($palette, radius);
     box-shadow: map-get($palette, shadow);
     padding: map-get($palette, padding);
+}
+
+
+$breakpoints: (
+    // tablet: 800px,
+    desktop: 1024px,
+);
+
+// @mixin tablet {
+//     @media screen and (min-width: map-get($breakpoints, tablet))  {
+//         @content
+//     }
+// };
+
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop))  {
+        @content
+    }
 }
