@@ -18,9 +18,9 @@
         font-size: 16px;
         display: flex;
         align-items: center;
+
         @include desktop {
-            width: auto;
-            min-width: 265px;
+            width: 320px;
         }
 
     }

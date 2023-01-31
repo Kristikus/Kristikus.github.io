@@ -28,7 +28,12 @@
         }
     }
     &_nav i {
-        width: 28px;
+        margin-right: 12px;
+        font-size: 14px;
+        width: 15px;
+    }
+    &_nav .fa-handshake-angle {
+        font-size: 13px;
     }
 
     &_nav a {
@@ -37,7 +42,7 @@
         display: block;
         @include desktop {
             display: flex;
-            margin-right: 24px;
+            margin-right: 40px;
             align-items: center;
         }
     }
