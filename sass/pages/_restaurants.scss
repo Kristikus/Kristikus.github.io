@@ -15,8 +15,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        @include desktop {
+        @include desktop{
             display: flex;
             flex-direction: row;
             overflow: scroll;
@@ -30,8 +29,7 @@
         box-shadow: $shadow-size rgba(0, 0, 0, 0.1);
         width: 100%;
         max-width: 700px;
-
-        @include desktop {
+        @include desktop{
             min-width: 330px;
         }
 
