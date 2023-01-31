@@ -12,6 +12,7 @@
     &_list {
         display: flex;
         flex-direction: column;
+        align-items: center;
         @include desktop{
             display: flex;
             flex-direction: row;
@@ -23,6 +24,8 @@
         border-radius: $radius-card;
         margin: 15px;
         box-shadow: $shadow-size rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 700px;
         @include desktop{
             min-width: 330px;
         }
