@@ -1,14 +1,15 @@
 .footer {
     background-color: #353535;
     padding: 30px;
-   
-    @include desktop{
+
+    @include desktop {
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-start;
         align-items: baseline;
-        padding-right: 50px;
+        padding-right: 120px;
     }
+
     &_logo {
         font-family: 'Shrikhand', cursive;
         font-style: normal;
@@ -17,6 +18,7 @@
         font-size: 18px;
         margin-left: 0;
         margin-bottom: 15px;
+
         @include desktop {
             margin: 0;
         }
@@ -25,13 +27,16 @@
     &_nav {
         @include desktop {
             display: flex;
+            align-items: baseline;
         }
     }
+
     &_nav i {
         margin-right: 12px;
         font-size: 14px;
         width: 15px;
     }
+
     &_nav .fa-handshake-angle {
         font-size: 13px;
     }
@@ -40,6 +45,7 @@
         color: $color-white;
         line-height: 25px;
         display: block;
+
         @include desktop {
             display: flex;
             margin-right: 40px;

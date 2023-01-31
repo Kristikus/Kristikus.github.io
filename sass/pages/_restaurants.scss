@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: $clr-bkg-clear;
-    padding: 45px 85px 60px;
+    padding: 35px 0px 55px;
 
     @include desktop {
         display: flex;
@@ -14,11 +14,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex-wrap: nowrap;
 
         @include desktop {
             display: flex;
             flex-direction: row;
-            overflow: scroll;
+            overflow: hidden;
         }
     }
 
@@ -27,11 +28,12 @@
         border-radius: $radius-card;
         margin: 15px;
         box-shadow: $shadow-size rgba(0, 0, 0, 0.1);
-        width: 100%;
+        width: 95%;
         max-width: 700px;
 
         @include desktop {
-            min-width: 320px;
+            width: 20%;
+            min-width: 315px;
         }
 
         & img {

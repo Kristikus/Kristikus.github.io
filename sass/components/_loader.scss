@@ -96,22 +96,3 @@
         visibility: hidden;
     }
 }
-
-
-// .load {
-//     width: $size*10;
-//     height: $size*7.5;
-//     display: flex;
-//     justify-content: space-evenly;
-//     &__bar {
-//         background-color: #15DEA5;
-//         height: 100%;
-//         width: $size;
-//         animation: bars $anim-dur backwards infinite alternate ease-in-out;
-//         @for $test from 1 through $num-bars {
-//             &--#{$test} {
-//                 animation-delay: $anim-delay * $test;
-//             }
-//         }
-//     }
-// }
