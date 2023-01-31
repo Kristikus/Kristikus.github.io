@@ -2,20 +2,20 @@
     display: flex;
     flex-direction: column;
     background-color: $clr-bkg-clear;
-    padding: 35px 15px;
+    padding: 45px 15px 60px;
 
     @include desktop {
         display: flex;
         justify-content: space-between;
         padding-left: 100px;
-        flex-wrap: nowrap;
     }
 
     &_list {
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include desktop{
+
+        @include desktop {
             display: flex;
             flex-direction: row;
             overflow: scroll;
@@ -29,7 +29,8 @@
         box-shadow: $shadow-size rgba(0, 0, 0, 0.1);
         width: 100%;
         max-width: 700px;
-        @include desktop{
+
+        @include desktop {
             min-width: 330px;
         }
 
