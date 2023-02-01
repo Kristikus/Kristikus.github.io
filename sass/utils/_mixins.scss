@@ -15,7 +15,6 @@ $btn-palette: (
         txt: $color-black,
         radius: $radius-card,
         shadow: $shadow-size rgba(0, 0, 0, 0.1),
-        // padding: 10px 0,
     ),
     btn-number: (bkg: $color-primary,
         txt: $color-white,
@@ -35,19 +34,11 @@ $btn-palette: (
 
 
 $breakpoints: (
-    // tablet: 800px,
     desktop: 1024px,
 );
 
-// @mixin tablet {
-//     @media screen and (min-width: map-get($breakpoints, tablet))  {
-//         @content
-//     }
-// };
-
-
 @mixin desktop {
-    @media screen and (min-width: map-get($breakpoints, desktop))  {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
         @content
     }
 }
