@@ -4,7 +4,7 @@
     position: fixed;
     background-color: $color-white;
     z-index: 9;
-    animation: background-loader 3s ease-in-out both;
+    animation: background-loader 3s ease-out both;
 
     &-div {
         & div:nth-child(1) {
@@ -20,7 +20,7 @@
             height: 80px;
             margin-left: -40px;
             margin-top: -40px;
-            animation: demi-circle 1s ease-in-out infinite both;
+            animation: semi-circle 1s ease-in-out infinite both;
         }
 
         & div:nth-child(2) {
@@ -45,8 +45,7 @@
         opacity: 0.9;
     }
 
-    95%,
-    100% {
+    95% {
         opacity: 0.9;
     }
 
@@ -73,7 +72,7 @@
     }
 }
 
-@keyframes demi-circle {
+@keyframes semi-circle {
     0% {
         transform: rotate(0deg);
         opacity: 0.6;
@@ -83,8 +82,7 @@
         opacity: 1;
     }
 
-    85%,
-    100% {
+    85% {
         transform: rotate(300deg);
         opacity: 0.7;
     }
